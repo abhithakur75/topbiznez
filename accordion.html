@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>.ad-spending h2 {
+    padding: 80px 0 40px 0;
+    color: var(--bl);
+}
+.accordion-item {
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.para {
+    display: none;
+    margin: 20px;
+}
+.accordion-item.active .para {
+    display: block;
+}
+.accordion i {
+    background: var(--bl);
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+}
+.ad-spending a {
+    color: #4b4a4a;
+}
+.see-more a {
+    color: var(--bl);
+    padding-top: 20px;
+    font-size: 18px;
+}</style>
+</head>
+<body>
+  <div class="col-8">
+    <div>
+        <h2>Capital Market</h2>
+        <div class="accordion">
+            <div class="accordion-click">
+                <div class="accordion-item active">
+                    <i class="fa-solid fa-question"></i> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?
+                    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, molestiae ipsam impedit omnis optio earum et exercitationem soluta ipsa facilis natus quae expedita ex nisi ab labore assumenda qui hic? Placeat aperiam nulla, quaerat modi animi consequatur? Quasi quae nesciunt eius accusamus necessitatibus deleniti, excepturi earum harum, nihil ratione ea.</p>
+                </div>
+            </div>
+            <div class="accordion-click">
+                <div class="accordion-item">
+                    <i class="fa-solid fa-question"></i> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?
+                    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, molestiae ipsam impedit omnis optio earum et exercitationem soluta ipsa facilis natus quae expedita ex nisi ab labore assumenda qui hic? Placeat aperiam nulla, quaerat modi animi consequatur? Quasi quae nesciunt eius accusamus necessitatibus deleniti, excepturi earum harum, nihil ratione ea.</p>
+                </div>
+            </div>
+            <div class="accordion-click">
+                <div class="accordion-item">
+                    <i class="fa-solid fa-question"></i> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?
+                    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, molestiae ipsam impedit omnis optio earum et exercitationem soluta ipsa facilis natus quae expedita ex nisi ab labore assumenda qui hic? Placeat aperiam nulla, quaerat modi animi consequatur? Quasi quae nesciunt eius accusamus necessitatibus deleniti, excepturi earum harum, nihil ratione ea.</p>
+                </div>
+            </div>
+            <div class="accordion-click">
+                <div class="accordion-item">
+                    <i class="fa-solid fa-question"></i> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium?
+                    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, molestiae ipsam impedit omnis optio earum et exercitationem soluta ipsa facilis natus quae expedita ex nisi ab labore assumenda qui hic? Placeat aperiam nulla, quaerat modi animi consequatur? Quasi quae nesciunt eius accusamus necessitatibus deleniti, excepturi earum harum, nihil ratione ea.</p>
+                </div>
+            </div>
+        </div>
+        <div class="see-more"><a href="">See more questions</a></div>
+    </div>
+</div>
+ <!-- jquery cdn-link -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+  $(function() {
+  $(".accordion-click .accordion-item").on("click", function(e) {
+      e.preventDefault();
+      if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+          $(this).find(".para").slideUp();
+      } else {
+          $(".accordion-click .accordion-item").removeClass("active");
+          $(".accordion-click .para").slideUp();
+          $(this).addClass("active");
+          $(this).find(".para").slideDown();
+      }
+  });
+});
+
+</script>
+</body>
+</html>
